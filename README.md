@@ -54,7 +54,7 @@ public ModelAndView getJournalEntry(@RequestParam int id) {
   
 }
 ```
-Wanna, know how to handle complete queries, like getting entries by category name ?
+Wanna, know how to handle complex queries, like getting entries by category name ?
 
 ```java
 @RequestMapping("/getEntriesByCategory")  
