@@ -39,6 +39,10 @@
          border: 1px solid white;
     }
 
+    h4 {
+        text-align: center;
+    }
+
 </style>
 <title>Get one entry response</title>
 </head>
