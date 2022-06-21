@@ -28,7 +28,7 @@ Content editor, written in Spring boot + Java server page (Jsp)
 ![enter image description here](https://res.cloudinary.com/dpqasrwfu/image/upload/v1655815770/dev_3_lnb9mx.png)
 
 
-### []()Login is very simple
+### []()Logic is very simple
 This is how we route to the page from controller
 
 ```java
