@@ -36,7 +36,7 @@ public class JournalEntryController {
 
         repository.save(entry);
 
-        return "home.jsp";
+        return "home";
     }
 
     // Retrieving all data
@@ -47,7 +47,7 @@ public class JournalEntryController {
         List<JournalEntry> journalEntries = repository.findAll();
 
         modelAndView.addObject("entries", journalEntries);
-        modelAndView.setViewName("getAllEntries.jsp");
+        modelAndView.setViewName("getAllEntries");
 
         return modelAndView;
     }
@@ -59,7 +59,7 @@ public class JournalEntryController {
         JournalEntry entryFound = repository.findById(id).orElse(new JournalEntry());
 
         modelAndView.addObject("entry", entryFound);
-        modelAndView.setViewName("getEntry.jsp");
+        modelAndView.setViewName("getEntry");
 
         return modelAndView;
 
@@ -71,7 +71,7 @@ public class JournalEntryController {
     public String deleteJournalEntry( @RequestParam int id) {
         repository.deleteById( id);
 
-        return "home.jsp";
+        return "home";
     }
 
     //**************** MORE COMPLEX QUERIES **********************
@@ -87,7 +87,7 @@ public class JournalEntryController {
 
         modelAndView.addObject("entries", entries);
 
-        modelAndView.setViewName("getEntriesByCategory.jsp");
+        modelAndView.setViewName("getEntriesByCategory");
 
         return modelAndView;
     }
@@ -101,7 +101,7 @@ public class JournalEntryController {
         List<JournalEntry> entries = repository.findByIdGreaterThan(id);
 
         modelAndView.addObject("entries",entries);
-        modelAndView.setViewName("getEntriesByIdGT.jsp");
+        modelAndView.setViewName("getEntriesByIdGT");
 
         return modelAndView;
     }
@@ -115,7 +115,7 @@ public class JournalEntryController {
         List<JournalEntry> entries = repository.findByCategorySorted(category);
 
         mv.addObject("entries",entries);
-        mv.setViewName("getEntriesByCategorySorted.jsp");
+        mv.setViewName("getEntriesByCategorySorted");
 
         return mv;
 
